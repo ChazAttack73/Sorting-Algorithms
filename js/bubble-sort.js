@@ -11,15 +11,14 @@ function bubbleSort( arr ) {
       arr[i] = b;
       arr[i + 1] = a;
       positionSwap++;
-      console.log(positionSwap);
     }
 
     if ( i === arr.length - 1 ) {
       if ( positionSwap === 0 ) {
-        console.log(arr);
+
         return arr;
       } else {
-        console.log(arr);
+
         return bubbleSort( arr );
       }
     }
