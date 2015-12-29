@@ -1,28 +1,35 @@
-module.exports = bubbleSort;
+'use strict';
 
-function bubbleSort( arr ) {
-  var positionSwap = 0;
+var bubbleSortModule = module.exports = (function() {
 
-  for( var i = 0; i < arr.length; i++ ) {
-    var a = arr[i];
-    var b = arr[i + 1];
+  return {
+    bubbleSort : function( arr ) {
+      var positionSwap = 0;
 
-    if ( a > b ) {
-      arr[i] = b;
-      arr[i + 1] = a;
-      positionSwap++;
-    }
+      for( var i = 0; i < arr.length; i++ ) {
+        var a = arr[i];
+        var b = arr[i + 1];
 
-    if ( i === arr.length - 1 ) {
-      if ( positionSwap === 0 ) {
+        if ( a > b ) {
+          arr[i] = b;
+          arr[i + 1] = a;
+          positionSwap++;
+        }
 
-        return arr;
-      } else {
+        if ( i === arr.length - 1 ) {
+          if ( positionSwap === 0 ) {
 
-        return bubbleSort( arr );
+            return arr;
+          } else {
+            return this.bubbleSort( arr );
+          }
+        }
       }
     }
-  }
-}
+  };
+}());
 
-console.log(bubbleSort( [7, 3, 5, 2, 28, 82, 4]));
+
+var testArr = [7, 3, 5, 2, 28, 82, 4];
+var bubble = bubbleSortModule;
+console.log( bubble.bubbleSort( testArr ));
