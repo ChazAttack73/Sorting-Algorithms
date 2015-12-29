@@ -5,19 +5,19 @@ function quickSort( arr ) {
   var leftPartition = [];
   var rightPartition = [];
 
-  for( var i = 0; i < arr.length; i++ ) {
-    if( arr[i] >= arr[0] ) {
-      rightPartition.push( arr[i] );
-    } else {
+  for( var i = 1; i < arr.length; i++ ) {
+    if( pivot > arr[i] ) {
       leftPartition.push( arr[i] );
-    }
-
-    if( arr.length <= 1 ) {
-
+    } else {
+      rightPartition.push( arr[i] );
     }
   }
-      console.log(rightPartition);
-      console.log(leftPartition);
+
+  if( arr.length <= 1 ) {
+    return arr;
+  } else {
+  return quickSort( leftPartition ).concat( pivot, quickSort( rightPartition ) );
+  }
 }
 
-console.log( quickSort( [10,3,2,53,4,89,9,9] ) );
+console.log(quickSort( [10,3,2,53,4,89,9,9] ) );
