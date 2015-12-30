@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var connect = require('gulp-connect');
 var browserify = require('gulp-browserify');
+//var concat = require('gulp-concat');
 
 gulp.task('connect', function(){
   connect.server({
@@ -34,7 +35,13 @@ gulp.task('browserify', function() {
       insertGlobals : true,
       debug : !gulp.env.production
     }))
-    .pipe(gulp.dest('./js/build'));
+    .pipe(gulp.dest('./public/js/build'));
 });
+
+// gulp.task('scriptsConcat', function() {
+//   return gulp.src('./public/js/build/*.js')
+//     .pipe(concat('all.js'))
+//     .pipe(gulp.dest('./public/dist/'));
+// });
 
 gulp.task('default', ['connect', 'watch', 'sass', 'browserify']);
