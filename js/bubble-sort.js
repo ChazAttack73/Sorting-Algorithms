@@ -1,6 +1,5 @@
-'use strict';
-
 var bubbleSortModule = module.exports = (function() {
+'use strict';
 
   return {
     bubbleSort : function( arr ) {
@@ -31,5 +30,5 @@ var bubbleSortModule = module.exports = (function() {
 
 
 var testArr = [7, 3, 5, 2, 28, 82, 4];
-var bubble = bubbleSortModule;
-console.log( bubble.bubbleSort( testArr ));
+var bubbleIt = bubbleSortModule;
+console.log( bubbleIt.bubbleSort( testArr ));
