@@ -33,8 +33,14 @@ var testArr = [7, 3, 5, 2, 28, 82, 4];
 var bubbleIt = bubbleSortModule;
 console.log( bubbleIt.bubbleSort( testArr ));
 
-var testDiv = $( '<div>' );
-  testDiv
-    .addClass( 'testDiv' )
+var mainDiv = $( '<div>' );
+  mainDiv
+    .addClass( 'mainDiv' )
   ;
-  $( 'body' ).append( testDiv );
+  $( 'body' ).append( mainDiv );
+
+var visualizerDiv = $( '<div>' );
+  visualizerDiv
+    .addClass( 'visualizerDiv' )
+  ;
+  $( mainDiv ).append( visualizerDiv );
