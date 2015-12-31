@@ -1,3 +1,5 @@
+var bubbleSortModule = require( './bubble-sort.js' );
+
 //========== Create main container for Visualizer
 var mainDiv = $( '<div>' );
   mainDiv
@@ -32,6 +34,7 @@ for( var j = 0; j < 50; j++ ) {
   var randoNum = Math.floor(( Math.random() * 50 ) + 1 );
   randoArr.push( randoNum );
 
+//========== Create bars proportionate to number value
   var bars = $( '<div>' );
     bars
       .addClass( 'bars' )
@@ -41,3 +44,8 @@ for( var j = 0; j < 50; j++ ) {
 }
 console.log(randoArr);
 
+//========== Click event for Bubble Sort
+$( '.sortButtonsDiv.Bubble' ).click(function() {
+  var bubbleSorted = bubbleSortModule.bubbleSort( randoArr );
+  console.log( bubbleSorted );
+});
