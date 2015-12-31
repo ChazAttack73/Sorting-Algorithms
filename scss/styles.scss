@@ -1,19 +1,21 @@
 * {
   box-sizing: border-box;
+  margin: 0px;
 }
 
 .mainDiv {
-  height: 600px;
+  height: 580px;
   width: 800px;
   display: flex;
   flex-flow: row wrap;
-  border: 2px solid #0F7501;
+  border: 3px solid #613113;
   border-radius: 5px;
   background-color: gray;
 }
 
 .visualizerDiv {
   display: flex;
+  align-items: flex-end;
   flex-flow: row wrap;
   flex: 0 0 100%;
   height: 90%;
@@ -26,12 +28,14 @@
   align-items: center;
   justify-content: center;
   height: 10%;
+  border-top: 2px solid #613113;
   font-family: Arial;
   font-size: 1.5em;
   background-color: #3A752B;
 }
 
 .bars {
-  flex: 0 0 2%;
-  background-color: red;
+  flex: 1 0 2%;
+  border: 1px dotted #3A752B;
+  background-color: #87D474;
 }
