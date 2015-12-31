@@ -4,9 +4,29 @@
 .mainDiv {
   height: 600px;
   width: 800px;
+  display: flex;
+  flex-flow: row wrap;
+  border: 2px solid #0F7501;
+  border-radius: 5px;
   background-color: gray; }
 
 .visualizerDiv {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 0 100%;
   height: 90%;
-  width: 100%;
-  background-color: yellow; }
+  background-color: #CBD9CA; }
+
+.sortButtonsDiv {
+  flex: 0 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  font-family: Arial;
+  font-size: 1.5em;
+  background-color: #3A752B; }
+
+.bars {
+  flex: 0 0 2%;
+  background-color: red; }
